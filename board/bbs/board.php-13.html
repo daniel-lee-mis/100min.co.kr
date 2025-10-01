@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>공지사항 1 페이지 | 백의민족</title>
+<link rel="stylesheet" href="../theme/basic/css/default.css?ver=210618">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css?ver=210618">
+<link rel="stylesheet" href="../skin/board/basic/style.css?ver=210618">
+<!--[if lte IE 8]>
+<script src="https://www.100min.co.kr:443/board/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://www.100min.co.kr:443/board";
+var g5_bbs_url   = "https://www.100min.co.kr:443/board/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "notice";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="../js/jquery-1.12.4.min.js?ver=210618"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js?ver=210618"></script>
+<script src="../js/jquery.menu.js?ver=210618"></script>
+<script src="../js/common.js?ver=210618"></script>
+<script src="../js/wrest.js?ver=210618"></script>
+<script src="../js/placeholders.min.js?ver=210618"></script>
+</head>
+<body>
+
+<!-- 게시판 목록 시작 { -->
+<div id="bo_list" style="width:100%">
+
+    <!-- 게시판 카테고리 시작 { -->
+        <!-- } 게시판 카테고리 끝 -->
+    
+    <form name="fboardlist" id="fboardlist" action="https://www.100min.co.kr:443/board/bbs/board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+    
+    <input type="hidden" name="bo_table" value="notice">
+    <input type="hidden" name="sfl" value="">
+    <input type="hidden" name="stx" value="">
+    <input type="hidden" name="spt" value="">
+    <input type="hidden" name="sca" value="">
+    <input type="hidden" name="sst" value="wr_datetime">
+    <input type="hidden" name="sod" value="asc">
+    <input type="hidden" name="page" value="1">
+    <input type="hidden" name="sw" value="">
+
+    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+    <div id="bo_btn_top">
+        <div id="bo_list_total">
+            <span>Total 1건</span>
+            1 페이지
+        </div>
+
+        <ul class="btn_bo_user">
+        	                        <li>
+            	<button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button>
+            </li>
+                    	        </ul>
+    </div>
+    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+        	
+    <div class="tbl_head01 tbl_wrap">
+        <table>
+        <caption>공지사항 목록</caption>
+        <thead>
+        <tr>
+                        <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+            <th scope="col"><a href="board.php-8.html?bo_table=notice&amp;sop=and&amp;sst=wr_hit&amp;sod=desc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">조회 </a></th>
+                                    <th scope="col"><a href="board.php-9.html?bo_table=notice&amp;sop=and&amp;sst=wr_datetime&amp;sod=desc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">날짜  </a></th>
+        </tr>
+        </thead>
+        <tbody>
+                <tr class=" even">
+                        <td class="td_num2">
+            1            </td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <div class="bo_tit">
+                    <a href="board.php-6.html?bo_table=notice&amp;wr_id=1&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=1">
+                                                                        세탁O2O 사업부문 영업 양도에 따른 개인정보 이전 사실 공고                    </a>
+                                                        </div>
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">(주)백의민족</span></td>
+            <td class="td_num">86</td>
+                                    <td class="td_datetime">21-09-16</td>
+
+        </tr>
+                        </tbody>
+        </table>
+    </div>
+	<!-- 페이지 -->
+		<!-- 페이지 -->
+	
+       
+    </form>
+
+    <!-- 게시판 검색 시작 { -->
+    <div class="bo_sch_wrap">
+        <fieldset class="bo_sch">
+            <h3>검색</h3>
+            <form name="fsearch" method="get">
+            <input type="hidden" name="bo_table" value="notice">
+            <input type="hidden" name="sca" value="">
+            <input type="hidden" name="sop" value="and">
+            <label for="sfl" class="sound_only">검색대상</label>
+            <select name="sfl" id="sfl">
+                <option value="wr_subject">제목</option><option value="wr_content">내용</option><option value="wr_subject||wr_content">제목+내용</option><option value="wr_name,1">글쓴이</option><option value="wr_name,0">글쓴이(코)</option>            </select>
+            <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+            <div class="sch_bar">
+                <input type="text" name="stx" value="" required="" id="stx" class="sch_input" size="25" maxlength="20" placeholder=" 검색어를 입력해주세요">
+                <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+            </div>
+            <button type="button" class="bo_sch_cls" title="닫기"><i class="fa fa-times" aria-hidden="true"></i><span class="sound_only">닫기</span></button>
+            </form>
+        </fieldset>
+        <div class="bo_sch_bg"></div>
+    </div>
+    <script>
+    jQuery(function($){
+        // 게시판 검색
+        $(".btn_bo_sch").on("click", function() {
+            $(".bo_sch_wrap").toggle();
+        })
+        $('.bo_sch_bg, .bo_sch_cls').click(function(){
+            $('.bo_sch_wrap').hide();
+        });
+    });
+    </script>
+    <!-- } 게시판 검색 끝 --> 
+</div>
+
+
+<!-- } 게시판 목록 끝 -->
+
+<!-- 사용스킨 : basic -->
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
+</html>
